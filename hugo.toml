@@ -1,0 +1,33 @@
+baseURL = '/'
+languageCode = 'zh'
+title = '院外网站'
+theme = 'PaperMod'
+relativeURLs = true
+canonifyURLs = false
+
+[params]
+  Toc = true          # 启用目录
+  TocOpen = true      # 默认展开目录（false 为折叠）
+  TocDepth = 3        # 目录层级
+
+
+[outputs]
+home = ["HTML", "JSON"] # 必须包含 JSON，用于生成搜索索引 index.json
+
+[params.fuseOpts]
+# 是否区分大小写（默认 false）
+isCaseSensitive = false
+# 是否包含匹配分数（默认 false）
+includeScore = false
+# 最小匹配字符数（默认 1）
+minMatchCharLength = 2
+# 搜索结果排序（默认 true）
+shouldSort = true
+# 匹配阈值（0=完全匹配，1=模糊匹配，默认 0.4）
+threshold = 0.6
+# 搜索范围距离（默认 100）
+distance = 150
+# 搜索结果数量限制（默认无）
+limit = 10
+# 自定义搜索字段（默认 ["title", "permalink", "summary", "content"]）
+keys = ["title", "content", "summary"]
